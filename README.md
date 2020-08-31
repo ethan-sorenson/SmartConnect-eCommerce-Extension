@@ -20,7 +20,7 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 
 3. Finally, there is the [WSPublishing.xml](WSPublishing.xml) which will automatically publish all needed web services when the app is published.
 
-### Getting Started
+## Getting Started
 
 1. You can either install the .app file directly or download the source code and make your own extension.
 2. Publish the extension, and click ***Refresh Service List*** on any BC Odata data source.
@@ -28,7 +28,7 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 
 ![increment](https://i.imgur.com/ENxN3bc.jpg)
 
-### Troubleshooting
+## Troubleshooting
 
 **Web Service isn't available after publishing**
 
@@ -40,7 +40,7 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 - Use github's issue reporter on the right
 - Send me an email ethan.sorenson@eonesolutions.com (might take a few days)
 
-### Updates
+## Updates
 
 - 1.0.0.0 first release on BC v16
 
