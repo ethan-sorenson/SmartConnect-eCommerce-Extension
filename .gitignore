@@ -1,7 +1,6 @@
 # Binary files
 .alpackages/
 .alcache/
-*.app
 
 # Temp files
 .vs/
