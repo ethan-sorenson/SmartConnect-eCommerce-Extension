@@ -18,7 +18,7 @@ tableextension 63001 SCTabItemCategory extends "Item Category"
 {
     fields
     {
-        field(63000; "No. 2"; Text[10])
+        field(63000; "No. 2"; Text[20])
         {
             Caption = 'No. 2';
         }
@@ -50,6 +50,40 @@ pageextension 63001 SCItemCategory extends "Item Category Card"
                 ApplicationArea = All;
                 ToolTip = 'Last Modified Date Time';
             }
+        }
+    }
+}
+
+pageextension 63002 SCInvoiceLine extends "Sales Invoice Subform"
+{
+    layout
+    {
+        addlast(Control1)
+        {
+            field("Description 2"; "Description 2")
+            {
+                ApplicationArea = All;
+
+                ToolTip = 'Unique Identifier from eCommerce';
+            }
+
+        }
+    }
+}
+
+pageextension 63003 SCCreditMemoLine extends "Sales Cr. Memo Subform"
+{
+    layout
+    {
+        addlast(Control1)
+        {
+            field("Description 2"; "Description 2")
+            {
+                ApplicationArea = All;
+
+                ToolTip = 'Unique Identifier from eCommerce';
+            }
+
         }
     }
 }

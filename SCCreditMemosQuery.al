@@ -222,6 +222,15 @@ query 63000 "SC Credit Memos Query"
                         {
                             Caption = 'Invoice Line Line No.';
                         }
+                        dataitem(SalesInvoiceLine; "Sales Invoice Line")
+                        {
+                            DataItemLink = "Line No." = InvoiceLine."Document Line No.";
+                            SqlJoinType = InnerJoin;
+                            column(Description2; "Description 2")
+                            {
+                                Caption = 'Description 2';
+                            }
+                        }
                     }
                 }
             }

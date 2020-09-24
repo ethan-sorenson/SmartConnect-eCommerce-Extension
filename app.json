@@ -2,7 +2,7 @@
   "id": "d2839a27-d260-4060-b7c8-bae1860af368",
   "name": "SmartConnect eCommerce Extension",
   "publisher": "eOne Solutions",
-  "version": "1.0.0.0",
+  "version": "1.0.0.1",
   "runtime": "5.0",
   "brief": "The SmartConnect eCommerce Extension is designed to expose Business Central endpoints that are commonly used in eCommerce integrations",
   "description": "Used with eOne SmartConnect to integrate eCommerce data into and out of Business Central",
