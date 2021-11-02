@@ -1,13 +1,33 @@
+tableextension 63002 SCTabItem extends "Item"
+
+{
+    fields
+    {
+        field(63000; "Inventory Id"; Text[20])
+        {
+            Caption = 'Inventory Identifier';
+        }
+    }
+}
+
 pageextension 63000 SCItemCard extends "Item Card"
 {
     layout
     {
         addafter("Purchasing Code")
         {
-            field("No. 2"; "No. 2")
+            field("No. 2"; Rec."No. 2")
             {
                 ApplicationArea = All;
                 ToolTip = 'External item identifier';
+            }
+        }
+        addlast("InventoryGrp")
+        {
+            field("Inventory Id"; Rec."Inventory Id")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Inventory Identifier';
             }
         }
     }
@@ -30,22 +50,22 @@ pageextension 63001 SCItemCategory extends "Item Category Card"
     {
         addafter("Parent Category")
         {
-            field(Indentation; Indentation)
+            field(Indentation; Rec.Indentation)
             {
                 ApplicationArea = All;
                 ToolTip = 'Indentation';
             }
-            field("Presentation Order"; "Presentation Order")
+            field("Presentation Order"; Rec."Presentation Order")
             {
                 ApplicationArea = All;
                 ToolTip = 'Presentation Order';
             }
-            field("No. 2"; "No. 2")
+            field("No. 2"; Rec."No. 2")
             {
                 ApplicationArea = All;
                 ToolTip = 'External No';
             }
-            field("Last Modified Date Time"; "Last Modified Date Time")
+            field("Last Modified Date Time"; Rec."Last Modified Date Time")
             {
                 ApplicationArea = All;
                 ToolTip = 'Last Modified Date Time';
@@ -54,13 +74,48 @@ pageextension 63001 SCItemCategory extends "Item Category Card"
     }
 }
 
+tableextension 63004 SCTabSalesLine extends "Sales Line"
+
+{
+    fields
+    {
+        field(63000; "eCommerce Id"; Text[20])
+        {
+            Caption = 'eCommerce Identifier';
+        }
+    }
+}
+
+tableextension 63005 SCTabSalesInvLine extends "Sales Invoice Line"
+
+{
+    fields
+    {
+        field(63000; "eCommerce id"; Text[20])
+        {
+            Caption = 'eCommerce Identifier';
+        }
+    }
+}
+
+tableextension 63006 SCTabSalesCrLine extends "Sales Cr.Memo Line"
+
+{
+    fields
+    {
+        field(63000; "eCommerce id"; Text[20])
+        {
+            Caption = 'eCommerce Identifier';
+        }
+    }
+}
 pageextension 63002 SCInvoiceLine extends "Sales Invoice Subform"
 {
     layout
     {
         addlast(Control1)
         {
-            field("Description 2"; "Description 2")
+            field("eCommerce Id"; Rec."eCommerce id")
             {
                 ApplicationArea = All;
 
@@ -77,13 +132,38 @@ pageextension 63003 SCCreditMemoLine extends "Sales Cr. Memo Subform"
     {
         addlast(Control1)
         {
-            field("Description 2"; "Description 2")
+            field("eCommerce Id"; Rec."eCommerce id")
             {
                 ApplicationArea = All;
 
                 ToolTip = 'Unique Identifier from eCommerce';
             }
 
+        }
+    }
+}
+tableextension 63003 SCLocation extends "Location"
+
+{
+    fields
+    {
+        field(63000; "External No."; Text[20])
+        {
+            Caption = 'External location identifier';
+        }
+    }
+}
+pageextension 63004 SCLocation extends "Location Card"
+{
+    layout
+    {
+        addlast(General)
+        {
+            field("External No."; Rec."External No.")
+            {
+                ApplicationArea = All;
+                ToolTip = 'External location identifier';
+            }
         }
     }
 }

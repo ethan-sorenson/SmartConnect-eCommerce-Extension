@@ -3,7 +3,7 @@ query 63000 "SC Credit Memos Query"
     QueryType = API;
     APIPublisher = 'eOneSolutions';
     APIGroup = 'SC';
-    APIVersion = 'v1.0';
+    APIVersion = 'v2.0';
     EntityName = 'SCCreditMemo';
     EntitySetName = 'SCCreditMemos';
 
@@ -205,6 +205,10 @@ query 63000 "SC Credit Memos Query"
                 column(ItemShortcutDimension2Code; "Shortcut Dimension 2 Code")
                 {
                     Caption = 'Item Shortcut Dimension 2 Code';
+                }
+                column(ItemEcommerceId; "eCommerce Id")
+                {
+                    Caption = 'Item eCommerce Id';
                 }
                 dataitem(InvoiceHeader; "Sales Invoice Header")
                 {

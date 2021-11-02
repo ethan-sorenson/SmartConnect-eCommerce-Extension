@@ -12,13 +12,17 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 
 1. Item Card - expose the 'No. 2' field to store the eCommerce Item Id.
 2. Item Category Card - Create and expose a 'No. 2' field to store eCommerce Item Category Id. 
-3. Sales Invoice Subform - Added Description 2 field to store Shopify line number.
-4. Sales Cr. Memo Subform - Added Description 2 field to store Shopify line number.
+3. Sales Invoice Subform - Added custom 'eCommerce Id' field to store Shopify line number.
+4. Sales Cr. Memo Subform - Added custom 'eCommerce Id' field to store Shopify line number.
+5. Location Card - Added and exposed 'External No.' field to store external location Ids
 
 ### Web Service Changes
 1. Included is one API page, [SCShippingAddress.Page.al](SCShippingAddress.Page.al), which allows us to work around a web service limitation as outlined [here](https://www.eonesolutions.com/help-article/failed-to-create-record-property-editable-for-ship-to-address-is-invalid/ "here")
 
-2. Also included is one API Query, [SCCreditMemosQuery.al](SCCreditMemosQuery.al), which allows us to efficiently query for posted Credit Memos to export to the eCommerce system.
+2. Also included are three API Queries, which allows us to efficiently perform complex queries.
+- [SCCreditMemosQuery.al](SCCreditMemosQuery.al)
+- [SCPaymentsQuery.al](SCPaymentsQuery.al)
+- [SCItemInventoryLevelByLocation.al.al](SCItemInventoryLevelByLocation.al)
 
 3. Finally, there is the [WSPublishing.xml](WSPublishing.xml) which will automatically publish all needed web services when the app is published.
 
@@ -46,5 +50,8 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 
 - 1.0.0.0 first release on BC v16
 - 1.0.0.1 added custom fields to Sales Lines to store Shopify Id
+- 1.0.0.2 updated Runtime to 7.0 and switched to AL Permission Sets
+- 1.0.0.3 added custom "External location identifier" field to location card, custom "Inventory Identifier" field to Item, and Payments Query
+
 
 ***Enjoy!***
