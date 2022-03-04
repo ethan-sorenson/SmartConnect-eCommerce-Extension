@@ -1,3 +1,4 @@
+//Query Query Inventory Level by Location
 query 63002 "SC Item Inv. Level By Location"
 
 {
@@ -40,6 +41,15 @@ query 63002 "SC Item Inv. Level By Location"
                     {
                     }
                     column(ItemExternalIdentifier; "No. 2")
+                    {
+                    }
+                    column(ItemType; Type)
+                    {
+                    }
+                    column(ItemAssemblyPolicy; "Assembly Policy")
+                    {
+                    }
+                    column(ItemReplenishmentSystem; "Replenishment System")
                     {
                     }
                 }

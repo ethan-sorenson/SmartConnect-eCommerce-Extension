@@ -2,31 +2,24 @@
     "id": "d2839a27-d260-4060-b7c8-bae1860af368",
     "name": "SmartConnect eCommerce Extension",
     "publisher": "eOne Solutions",
-    "version": "1.0.0.3",
-    "runtime": "7.0",
+    "version": "1.0.0.4",
+    "runtime": "8.0",
     "brief": "The SmartConnect eCommerce Extension is designed to expose Business Central endpoints that are commonly used in eCommerce integrations",
     "description": "Used with eOne SmartConnect to integrate eCommerce data into and out of Business Central",
-    "showMyCode": true,
+    "resourceExposurePolicy": {
+        "allowDebugging": true,
+        "allowDownloadingSource": true,
+        "includeSourceInSymbolFile": true
+      },
     "target": "Cloud",
     "logo": "./images/SmartConnect.jpg",
     "privacyStatement": "https://www.eonesolutions.com/privacy-policy/",
     "EULA": "https://www.eonesolutions.com/end-user-license-agreement/",
-    "help": "https://www.eonesolutions.com/support-center/",
+    "help": "https://github.com/ethan-sorenson/SmartConnect-eCommerce-Extension",
     "url": "https://smartconnect.com/",
-    "platform": "16.0.11233.11920",
-    "dependencies": [{
-            "id": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
-            "publisher": "Microsoft",
-            "name": "System Application",
-            "version": "16.0.0.0"
-        },
-        {
-            "id": "437dbf0e-84ff-417a-965d-ed2bb9650972",
-            "name": "Base Application",
-            "version": "16.0.11240.13412",
-            "publisher": "Microsoft"
-        }
-    ],
+    "platform": "14.0.0.0",
+    "application": "14.0.0.0",
+    "dependencies": [],
     "idRanges": [{
         "from": 63000,
         "to": 63050

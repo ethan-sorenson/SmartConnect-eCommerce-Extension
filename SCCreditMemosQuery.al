@@ -1,3 +1,4 @@
+//Query Credit Memos including related Posted Invoice
 query 63000 "SC Credit Memos Query"
 {
     QueryType = API;
@@ -230,9 +231,9 @@ query 63000 "SC Credit Memos Query"
                         {
                             DataItemLink = "Line No." = InvoiceLine."Document Line No.";
                             SqlJoinType = InnerJoin;
-                            column(Description2; "Description 2")
+                            column(InvoiceLineEcommerceId; "eCommerce Id")
                             {
-                                Caption = 'Description 2';
+                                Caption = 'Invoice Line EcommerceId';
                             }
                         }
                     }

@@ -22,7 +22,7 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 2. Also included are three API Queries, which allows us to efficiently perform complex queries.
 - [SCCreditMemosQuery.al](SCCreditMemosQuery.al)
 - [SCPaymentsQuery.al](SCPaymentsQuery.al)
-- [SCItemInventoryLevelByLocation.al.al](SCItemInventoryLevelByLocation.al)
+- [SCItemInventoryLevelByLocation.al](SCItemInventoryLevelByLocation.al)
 
 3. Finally, there is the [WSPublishing.xml](WSPublishing.xml) which will automatically publish all needed web services when the app is published.
 
@@ -51,7 +51,7 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 - 1.0.0.0 first release on BC v16
 - 1.0.0.1 added custom fields to Sales Lines to store Shopify Id
 - 1.0.0.2 updated Runtime to 7.0 and switched to AL Permission Sets
-- 1.0.0.3 added custom "External location identifier" field to location card, custom "Inventory Identifier" field to Item, and Payments Query
-
+- 1.0.0.3 added custom "External location identifier" field to location card, custom "Inventory Identifier" field to Item and Payments Query
+- 1.0.0.4 added additional detail to the credit memo and inventory location queries
 
 ***Enjoy!***
