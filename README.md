@@ -53,5 +53,6 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 - 1.0.0.2 updated Runtime to 7.0 and switched to AL Permission Sets
 - 1.0.0.3 added custom "External location identifier" field to location card, custom "Inventory Identifier" field to Item and Payments Query
 - 1.0.0.4 added additional detail to the credit memo and inventory location queries
+- 1.0.0.5 added Document Type and Your Reference to Shipping Address page. Tested on BC v21
 
 ***Enjoy!***

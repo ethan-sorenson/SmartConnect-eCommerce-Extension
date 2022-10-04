@@ -23,6 +23,18 @@ page 63000 "SC Shipping Address"
                     Caption = 'No';
 
                 }
+                field(DocumentType; Rec."Document Type")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Document Type';
+
+                }
+                field(YourReference; Rec."Your Reference")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Your Reference';
+
+                }
                 field(SystemId; Rec."SystemId")
                 {
                     ApplicationArea = All;

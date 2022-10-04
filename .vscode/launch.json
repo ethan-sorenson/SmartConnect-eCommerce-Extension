@@ -7,7 +7,7 @@
       "name": "Publish",
       "tenant": "eOnes.onmicrosoft.com",
       "environmentType": "Sandbox",
-      "environmentName": "US",
+      "environmentName": "GB",
       "schemaUpdateMode": "Synchronize"
     }
   ]
