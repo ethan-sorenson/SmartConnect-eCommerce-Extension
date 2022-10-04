@@ -167,3 +167,30 @@ pageextension 63004 SCLocation extends "Location Card"
         }
     }
 }
+
+tableextension 63007 SCTabCustomer extends "Customer"
+
+{
+    fields
+    {
+        field(63000; "eCommerce Id"; Text[20])
+        {
+            Caption = 'eCommerce Id';
+        }
+    }
+}
+
+pageextension 63005 SCCustomerCard extends "Customer Card"
+{
+    layout
+    {
+        addafter("Salesperson Code")
+        {
+            field("eCommerce Id"; rec."eCommerce Id")
+            {
+                ApplicationArea = All;
+                ToolTip = 'eCommerce external identifier';
+            }
+        }
+    }
+}
