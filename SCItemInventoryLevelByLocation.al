@@ -1,6 +1,5 @@
 //Query Query Inventory Level by Location
 query 63002 "SC Item Inv. Level By Location"
-
 {
     QueryType = API;
     APIPublisher = 'eOneSolutions';
@@ -50,6 +49,15 @@ query 63002 "SC Item Inv. Level By Location"
                     {
                     }
                     column(ItemReplenishmentSystem; "Replenishment System")
+                    {
+                    }
+                    column(ItemBlocked; Blocked)
+                    {
+                    }
+                    column(ItemSalesBlocked; "Sales Blocked")
+                    {
+                    }
+                    column(ItemInventoryPostingGroup; "Inventory Posting Group")
                     {
                     }
                 }

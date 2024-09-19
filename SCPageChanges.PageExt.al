@@ -7,19 +7,27 @@ tableextension 63002 SCTabItem extends "Item"
         {
             Caption = 'Inventory Identifier';
         }
+        field(63001; "eCommerce Id"; Text[20])
+        {
+            Caption = 'eCommerce Identifier';
+        }
     }
 }
 
-pageextension 63000 SCItemCard extends "Item Card"
+pageextension 63008 SCItemCard extends "Item Card"
 {
     layout
     {
         addafter("Purchasing Code")
         {
-            field("No. 2"; Rec."No. 2")
+            field("eCommerce No. 2"; Rec."No. 2")
             {
                 ApplicationArea = All;
-                ToolTip = 'External item identifier';
+            }
+            field("eCommerce Id"; Rec."eCommerce Id")
+            {
+                ApplicationArea = All;
+                ToolTip = 'eCommerce item identifier';
             }
         }
         addlast("InventoryGrp")
@@ -125,6 +133,22 @@ pageextension 63002 SCInvoiceLine extends "Sales Invoice Subform"
         }
     }
 }
+pageextension 63006 SCOrderLine extends "Sales Order Subform"
+{
+    layout
+    {
+        addlast(Control1)
+        {
+            field("eCommerce Id"; Rec."eCommerce id")
+            {
+                ApplicationArea = All;
+
+                ToolTip = 'Unique Identifier from eCommerce';
+            }
+
+        }
+    }
+}
 
 pageextension 63003 SCCreditMemoLine extends "Sales Cr. Memo Subform"
 {
@@ -191,6 +215,35 @@ pageextension 63005 SCCustomerCard extends "Customer Card"
                 ApplicationArea = All;
                 ToolTip = 'eCommerce external identifier';
             }
+        }
+    }
+}
+
+tableextension 63008 SCSalesShipmentLine extends "Sales Shipment Line"
+
+{
+    fields
+    {
+        field(63000; "eCommerce id"; Text[20])
+        {
+            Caption = 'eCommerce Identifier';
+        }
+    }
+}
+
+pageextension 63007 SCPostedSalesShptSubform extends "Posted Sales Shpt. Subform"
+{
+    layout
+    {
+        addlast(Control1)
+        {
+            field("eCommerce Id"; Rec."eCommerce id")
+            {
+                ApplicationArea = All;
+
+                ToolTip = 'Unique Identifier from eCommerce';
+            }
+
         }
     }
 }

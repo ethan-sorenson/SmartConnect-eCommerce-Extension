@@ -1,14 +1,14 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "al",
-      "request": "launch",
-      "name": "Publish",
-      "tenant": "eOnes.onmicrosoft.com",
-      "environmentType": "Sandbox",
-      "environmentName": "GB",
-      "schemaUpdateMode": "Synchronize"
-    }
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "Publish",
+            "tenant": "eOnes.onmicrosoft.com",
+            "environmentType": "Sandbox",
+            "environmentName": "GB",
+            "schemaUpdateMode": "Synchronize"
+        }
+    ]
 }

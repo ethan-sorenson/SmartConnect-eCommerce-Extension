@@ -12,8 +12,8 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 
 1. Item Card - expose the 'No. 2' field to store the eCommerce Item Id.
 2. Item Category Card - Create and expose a 'No. 2' field to store eCommerce Item Category Id. 
-3. Sales Invoice Subform - Added custom 'eCommerce Id' field to store Shopify line number.
-4. Sales Cr. Memo Subform - Added custom 'eCommerce Id' field to store Shopify line number.
+3. Sales Invoice Sub form - Added custom 'eCommerce Id' field to store Shopify line number.
+4. Sales Cr. Memo Sub form - Added custom 'eCommerce Id' field to store Shopify line number.
 5. Location Card - Added and exposed 'External No.' field to store external location Ids
 
 ### Web Service Changes
@@ -29,7 +29,7 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 ## Getting Started
 
 1. You can either install the .app file directly or download the source code and make your own extension.
-2. Publish the extension, and click ***Refresh Service List*** on any BC Odata data source.
+2. Publish the extension, and click ***Refresh Service List*** on any BC OData data source.
 3. Import the integration processes for your eCommerce integration.
 
 ![increment](https://i.imgur.com/ENxN3bc.jpg)
@@ -43,7 +43,7 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 
 **Something else isn't working properly**
 
-- Use github's issue reporter on the right
+- Use GitHub's issue reporter on the right
 - Send me an email ethan.sorenson@eonesolutions.com (might take a few days)
 
 ## Updates
@@ -54,5 +54,7 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 - 1.0.0.3 added custom "External location identifier" field to location card, custom "Inventory Identifier" field to Item and Payments Query
 - 1.0.0.4 added additional detail to the credit memo and inventory location queries
 - 1.0.0.5 added Document Type and Your Reference to Shipping Address page. added No. 2 Field to Customer Card. Tested on BC v21
+- 1.0.0.6 added Fulfillment Order web service and query.
+- 1.0.0.7 replaced Item No. 2 field on Item table with custom eCommerce Id field.
 
 ***Enjoy!***

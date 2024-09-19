@@ -131,23 +131,6 @@ page 63000 "SC Shipping Address"
                             Rec.CopySellToAddressToBillToAddress;
                     END;
                 }
-                field(BillToName; Rec."Bill-to Name")
-                {
-                    ApplicationArea = All;
-                    Caption = 'Bill-to Name';
-                    trigger OnValidate();
-                    Begin
-                        IF Rec.GETFILTER("Bill-to Customer No.") = xRec."Bill-to Customer No." THEN
-                            IF Rec."Bill-to Customer No." <> xRec."Bill-to Customer No." THEN
-                                Rec.SETRANGE("Bill-to Customer No.");
-
-                        IF ApplicationAreaMgmtFacade.IsFoundationEnabled THEN
-                            SalesCalcDiscountByType.ApplyDefaultInvoiceDiscount(0, Rec);
-
-                        CurrPage.UPDATE;
-                    End;
-
-                }
                 field(BillToAddress; Rec."Bill-to Address")
                 {
                     ApplicationArea = All;
@@ -203,6 +186,4 @@ page 63000 "SC Shipping Address"
     var
         ShipToOptions: Text;
         BillToOptions: Text;
-        ApplicationAreaMgmtFacade: codeunit "Application Area Mgmt. Facade";
-        SalesCalcDiscountByType: codeunit "Sales - Calc Discount By Type";
 }

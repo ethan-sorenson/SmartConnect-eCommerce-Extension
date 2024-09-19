@@ -56,6 +56,12 @@
             <Published>true</Published>
         </TenantWebService>
         <TenantWebService>
+            <ObjectType>Page</ObjectType>
+            <ServiceName>SalesOrder</ServiceName>
+            <ObjectID>42</ObjectID>
+            <Published>true</Published>
+        </TenantWebService>
+        <TenantWebService>
             <ObjectType>Query</ObjectType>
             <ServiceName>SCCreditMemosQuery</ServiceName>
             <ObjectID>63000</ObjectID>
@@ -65,6 +71,12 @@
             <ObjectType>Query</ObjectType>
             <ServiceName>SCItemInventoryLevelQuantityByLocation</ServiceName>
             <ObjectID>63002</ObjectID>
+            <Published>true</Published>
+        </TenantWebService>
+        <TenantWebService>
+            <ObjectType>Query</ObjectType>
+            <ServiceName>SCSalesShipment</ServiceName>
+            <ObjectID>63003</ObjectID>
             <Published>true</Published>
         </TenantWebService>
     </TenantWebServiceCollection>

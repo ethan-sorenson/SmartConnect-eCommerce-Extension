@@ -6,7 +6,7 @@ query 63000 "SC Credit Memos Query"
     APIGroup = 'SC';
     APIVersion = 'v2.0';
     EntityName = 'SCCreditMemo';
-    EntitySetName = 'SCCreditMemos';
+    EntitySetName = 'SCCreditMemo';
 
     elements
     {
@@ -147,70 +147,70 @@ query 63000 "SC Credit Memos Query"
             {
                 DataItemLink = "Document No." = Header."No.";
                 SqlJoinType = LeftOuterJoin;
-                column(ItemNo; "Line No.")
+                column(ItemNo; "No.")
                 {
                     Caption = 'Item No';
                 }
-                column(ItemAttachedLineNo; "Appl.-from Item Entry")
-                {
-                    Caption = 'Item Attached Line No';
-                }
-                column(ItemType; "Type")
-                {
-                    Caption = 'Item Type';
-                }
-                column(ItemLineNo; "Line No.")
-                {
-                    Caption = 'Item Line No.';
-                }
-                column(ItemLocationCode; "Location Code")
-                {
-                    Caption = 'Item Location Code';
-                }
-                column(ItemDescription; Description)
-                {
-                    Caption = 'Item Description';
-                }
-                column(ItemQuantity; Quantity)
-                {
-                    Caption = 'Item Quantity';
-                }
-                column(ItemLineAmount; "Line Amount")
-                {
-                    Caption = 'Item Line Amount';
-                }
-                column(ItemUnitofMeasureCode; "Unit of Measure Code")
-                {
-                    Caption = 'Item Unit of Measure Code';
-                }
-                column(ItemUnitofMeasure; "Unit of Measure")
-                {
-                    Caption = 'Item Unit of Measure';
-                }
-                column(ItemUnitPrice; "Unit Price")
-                {
-                    Caption = 'Item Unit Price';
-                }
-                column(ItemLineDiscountPercent; "Line Discount %")
-                {
-                    Caption = 'Item Line Discount %';
-                }
-                column(ItemLineDiscountAmount; "Line Discount Amount")
-                {
-                    Caption = 'Item Line Discount Amount';
-                }
-                column(ItemShortcutDimension1Code; "Shortcut Dimension 1 Code")
-                {
-                    Caption = 'Item Shortcut Dimension 1 Code';
-                }
-                column(ItemShortcutDimension2Code; "Shortcut Dimension 2 Code")
-                {
-                    Caption = 'Item Shortcut Dimension 2 Code';
-                }
-                column(ItemEcommerceId; "eCommerce Id")
-                {
-                    Caption = 'Item eCommerce Id';
-                }
+                // column(ItemAttachedLineNo; "Appl.-from Item Entry")
+                // {
+                //     Caption = 'Item Attached Line No';
+                // }
+                // column(ItemType; "Type")
+                // {
+                //     Caption = 'Item Type';
+                // }
+                // column(ItemLineNo; "Line No.")
+                // {
+                //     Caption = 'Item Line No.';
+                // }
+                // column(ItemLocationCode; "Location Code")
+                // {
+                //     Caption = 'Item Location Code';
+                // }
+                // column(ItemDescription; Description)
+                // {
+                //     Caption = 'Item Description';
+                // }
+                // column(ItemQuantity; Quantity)
+                // {
+                //     Caption = 'Item Quantity';
+                // }
+                // column(ItemLineAmount; "Line Amount")
+                // {
+                //     Caption = 'Item Line Amount';
+                // }
+                // column(ItemUnitofMeasureCode; "Unit of Measure Code")
+                // {
+                //     Caption = 'Item Unit of Measure Code';
+                // }
+                // column(ItemUnitofMeasure; "Unit of Measure")
+                // {
+                //     Caption = 'Item Unit of Measure';
+                // }
+                // column(ItemUnitPrice; "Unit Price")
+                // {
+                //     Caption = 'Item Unit Price';
+                // }
+                // column(ItemLineDiscountPercent; "Line Discount %")
+                // {
+                //     Caption = 'Item Line Discount %';
+                // }
+                // column(ItemLineDiscountAmount; "Line Discount Amount")
+                // {
+                //     Caption = 'Item Line Discount Amount';
+                // }
+                // column(ItemShortcutDimension1Code; "Shortcut Dimension 1 Code")
+                // {
+                //     Caption = 'Item Shortcut Dimension 1 Code';
+                // }
+                // column(ItemShortcutDimension2Code; "Shortcut Dimension 2 Code")
+                // {
+                //     Caption = 'Item Shortcut Dimension 2 Code';
+                // }
+                // column(ItemEcommerceId; "eCommerce Id")
+                // {
+                //     Caption = 'Item eCommerce Id';
+                // }
                 dataitem(InvoiceHeader; "Sales Invoice Header")
                 {
                     DataItemLink = "No." = Header."Applies-to Doc. No.";
@@ -219,10 +219,14 @@ query 63000 "SC Credit Memos Query"
                     {
                         Caption = 'Invoice External No.';
                     }
+                    column(InvoiceYourReference; "Your Reference")
+                    {
+                        Caption = 'Invoice Your Reference';
+                    }
                     dataitem(InvoiceLine; "Item Ledger Entry")
                     {
                         DataItemLink = "Entry No." = CreditMemoLine."Appl.-from Item Entry";
-                        SqlJoinType = InnerJoin;
+                        SqlJoinType = LeftOuterJoin;
                         column(InvoiceLineLineNo; "Document Line No.")
                         {
                             Caption = 'Invoice Line Line No.';
@@ -230,8 +234,8 @@ query 63000 "SC Credit Memos Query"
                         dataitem(SalesInvoiceLine; "Sales Invoice Line")
                         {
                             DataItemLink = "Line No." = InvoiceLine."Document Line No.";
-                            SqlJoinType = InnerJoin;
-                            column(InvoiceLineEcommerceId; "eCommerce Id")
+                            SqlJoinType = LeftOuterJoin;
+                            column(SalesInvoiceLine_eCommerce_Id; "eCommerce Id")
                             {
                                 Caption = 'Invoice Line EcommerceId';
                             }
