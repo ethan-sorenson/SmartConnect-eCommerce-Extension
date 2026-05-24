@@ -20,10 +20,6 @@ pageextension 63008 SCItemCard extends "Item Card"
     {
         addafter("Purchasing Code")
         {
-            field("eCommerce No. 2"; Rec."No. 2")
-            {
-                ApplicationArea = All;
-            }
             field("eCommerce Id"; Rec."eCommerce Id")
             {
                 ApplicationArea = All;

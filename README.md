@@ -10,7 +10,7 @@ This Extension modifies two pages in the Business Central, and publishes several
 ### Page Changes
 The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageChanges.PageExt.al) file.
 
-1. Item Card - expose the 'No. 2' field to store the eCommerce Item Id.
+1. Item Card - Create and expose a custom 'eCommerce Id' field to store the eCommerce Item Id.
 2. Item Category Card - Create and expose a 'No. 2' field to store eCommerce Item Category Id. 
 3. Sales Invoice Sub form - Added custom 'eCommerce Id' field to store Shopify line number.
 4. Sales Cr. Memo Sub form - Added custom 'eCommerce Id' field to store Shopify line number.
@@ -56,5 +56,6 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 - 1.0.0.5 added Document Type and Your Reference to Shipping Address page. added No. 2 Field to Customer Card. Tested on BC v21
 - 1.0.0.6 added Fulfillment Order web service and query.
 - 1.0.0.7 replaced Item No. 2 field on Item table with custom eCommerce Id field.
+- 1.0.0.8 added upgrade codeunit to migrate existing Item "No. 2" values into the new "eCommerce Id" field.
 
 ***Enjoy!***

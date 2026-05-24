@@ -39,7 +39,7 @@ query 63002 "SC Item Inv. Level By Location"
                     column(ItemInventoryIdentifier; "Inventory Id")
                     {
                     }
-                    column(ItemExternalIdentifier; "No. 2")
+                    column(ItemExternalIdentifier; "eCommerce Id")
                     {
                     }
                     column(ItemType; Type)
