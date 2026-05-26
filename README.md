@@ -56,6 +56,6 @@ The following two pages are modified in the [SCPageChanges.PageExt.al](SCPageCha
 - 1.0.0.5 added Document Type and Your Reference to Shipping Address page. added No. 2 Field to Customer Card. Tested on BC v21
 - 1.0.0.6 added Fulfillment Order web service and query.
 - 1.0.0.7 replaced Item No. 2 field on Item table with custom eCommerce Id field.
-- 1.0.0.8 added upgrade codeunit to migrate existing Item "No. 2" values into the new "eCommerce Id" field.
+- 1.0.0.9 added upgrade codeunit to migrate existing Item "No. 2" values into the new "eCommerce Id" field.
 
 ***Enjoy!***
